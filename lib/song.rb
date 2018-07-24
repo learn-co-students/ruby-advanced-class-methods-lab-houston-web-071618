@@ -90,10 +90,10 @@ class Song
   def self.new_from_filename(filename)
     split_filename = filename.split(" - ")
     artist_name = split_filename[0]
-    song_name = split_filename[1].chomp(".mp3")
+    name = split_filename[1].chomp(".mp3")
     # binding.pry
     song = Song.new
-    song.name = song_name
+    song.name = name
     song.artist_name = artist_name
     song
   end
@@ -101,10 +101,10 @@ class Song
   def self.create_from_filename(filename)
     split_filename = filename.split(" - ")
     artist_name = split_filename[0]
-    song_name = split_filename[1].chomp(".mp3")
+    name = split_filename[1].chomp(".mp3")
     # binding.pry
     song = Song.create
-    song.name = song_name
+    song.name = name
     song.artist_name = artist_name
     song
   end
